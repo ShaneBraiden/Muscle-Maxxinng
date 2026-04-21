@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Log Workout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#4338ca",
+                    "on-secondary-fixed-variant": "#404252",
+                    "inverse-surface": "#2e3040",
+                    "tertiary-container": "#a78bfa",
+                    "secondary-fixed-dim": "#b8baca",
+                    "on-primary-container": "#e0e2ff",
+                    "primary-fixed-dim": "#a5b4fc",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5b21b6",
+                    "on-tertiary-fixed": "#2e1065",
+                    "error-container": "#fee2e2",
+                    "tertiary-fixed": "#ede9fe",
+                    "primary-container": "#818cf8",
+                    "surface-dim": "#d4d6dc",
+                    "surface-container": "#e2e4ea",
+                    "inverse-on-surface": "#e8eaf0",
+                    "surface-variant": "#dcdee4",
+                    "surface-container-highest": "#d6d8de",
+                    "on-surface": "#2e3040",
+                    "surface-bright": "#edeef4",
+                    "on-background": "#2e3040",
+                    "tertiary": "#7c3aed",
+                    "inverse-primary": "#a5b4fc",
+                    "primary-fixed": "#e0e2ff",
+                    "on-tertiary-container": "#3b1f63",
+                    "error": "#dc2626",
+                    "on-surface-variant": "#585a68",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#e8eaf0",
+                    "secondary": "#6c6e7e",
+                    "secondary-container": "#d8dae6",
+                    "outline-variant": "#d0d2dc",
+                    "surface-container-lowest": "#f0f2f8",
+                    "surface": "#e8eaf0",
+                    "tertiary-fixed-dim": "#c4b5fd",
+                    "surface-container-high": "#dcdee4",
+                    "surface-container-low": "#e5e7ed",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#991b1b",
+                    "secondary-fixed": "#d8dae6",
+                    "primary": "#6366f1",
+                    "on-secondary-container": "#585a68",
+                    "surface-tint": "#6366f1",
+                    "on-primary-fixed": "#1e1b4b",
+                    "outline": "#8a8c9a",
+                    "on-secondary-fixed": "#1a1b26"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #e8eaf0;
+        }
+        
+        /* Neomorphic Utilities */
+        .neo-raised {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+            background-color: #e8eaf0;
+        }
+        .neo-inset {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+            background-color: #e8eaf0;
+        }
+        .neo-pressed:active {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+        }
+        
+        /* Specific element resets to match the background */
+        input[type="text"], input[type="number"] {
+            background-color: transparent;
+            border: none;
+        }
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased pb-24">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex justify-between items-center px-6 py-4 w-full bg-[#e8eaf0] z-40 sticky">
+<button aria-label="Go back" class="text-[#6366f1] hover:opacity-80 transition-opacity flex items-center justify-center w-10 h-10 rounded-full neo-raised neo-pressed">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold text-lg text-[#6366f1] tracking-tight">Silk Fitness</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden neo-raised border-2 border-transparent">
+<img alt="User profile picture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgA0LBixl_u43QEsw9R5KGQVUYwfkcAQEec9xaWX6A7lPPP-MMFBKxp5Tg9iYlYPEro55BAJDXkAjrG8ePhHzzELDGXnj_oaLDbE-RYwxb1YvwdhndLYHGdkPPTY0W0aJkd068_eFjapsVLbrhNFTV-8Drfrg87NPTVsT4evPLqzfypNF3H5In55NyMsQvWEl0dQApwQbGAj5glxIYVmcsuCKsouCwyQZrAMfksMN0jBcSI_UdtaRX8p7bwfFtBBOKoynhhPe09ZQ"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 py-6 md:px-8 max-w-3xl mx-auto w-full flex flex-col gap-8">
+<!-- Workout Header Area -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between w-full neo-inset rounded-2xl p-4">
+<input class="font-headline font-semibold text-2xl text-on-surface bg-transparent border-none w-full outline-none focus:ring-0 p-0" placeholder="Workout Name" type="text" value="Push Day"/>
+<button class="text-secondary hover:text-primary transition-colors flex-shrink-0 ml-2">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="flex gap-4">
+<div class="flex-1 neo-inset rounded-xl p-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="calendar_today">calendar_today</span>
+<input class="font-body text-sm text-on-surface-variant bg-transparent border-none w-full outline-none p-0" type="text" value="Today, 8:00 AM"/>
+</div>
+<div class="w-1/3 neo-inset rounded-xl p-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="timer">timer</span>
+<input class="font-body text-sm text-on-surface-variant bg-transparent border-none w-full outline-none p-0 text-right pr-1" type="number" value="60"/>
+<span class="font-body text-sm text-on-surface-variant">min</span>
+</div>
+</div>
+<!-- Settings Toggles -->
+<div class="flex justify-between items-center px-2 py-2">
+<span class="font-label font-medium text-on-surface">Heavy Day</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-14 h-8 neo-inset rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-[#e8eaf0] after:shadow-[2px_2px_4px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.7)] after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:after:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- Exercise List -->
+<section class="flex flex-col gap-6">
+<!-- Exercise Card 1 -->
+<article class="neo-raised rounded-3xl p-5 flex flex-col gap-5">
+<!-- Header -->
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-semibold text-lg text-on-surface">Barbell Bench Press</h2>
+<p class="font-body text-xs text-on-surface-variant mt-1">Last: 80kg x 5</p>
+</div>
+<button class="w-8 h-8 rounded-full neo-raised flex items-center justify-center text-secondary hover:text-error transition-colors neo-pressed">
+<span class="material-symbols-outlined text-sm" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<!-- Chips -->
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full neo-inset text-xs font-medium text-primary">Chest</span>
+<span class="px-3 py-1 rounded-full neo-inset text-xs font-medium text-secondary">Triceps</span>
+</div>
+<!-- Sets Table Container -->
+<div class="w-full">
+<!-- Table Header -->
+<div class="flex text-xs font-label text-on-surface-variant mb-2 px-2">
+<div class="w-12 text-center">Set</div>
+<div class="flex-1 text-center">kg</div>
+<div class="flex-1 text-center">Reps</div>
+<div class="w-16 text-center">RPE</div>
+<div class="w-10"></div>
+</div>
+<!-- Set Rows -->
+<div class="flex flex-col gap-3">
+<!-- Set 1 -->
+<div class="flex items-center gap-2">
+<div class="w-12 h-10 neo-inset rounded-lg flex items-center justify-center font-body text-sm font-medium text-on-surface">
+                                1
+                            </div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="60"/>
+</div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="10"/>
+</div>
+<div class="w-16 h-10 neo-inset rounded-lg px-2 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="7"/>
+</div>
+<button class="w-10 h-10 rounded-lg neo-raised flex items-center justify-center text-[#22c55e] neo-pressed">
+<span class="material-symbols-outlined text-lg" data-icon="check">check</span>
+</button>
+</div>
+<!-- Set 2 -->
+<div class="flex items-center gap-2">
+<div class="w-12 h-10 neo-inset rounded-lg flex items-center justify-center font-body text-sm font-medium text-on-surface">
+                                2
+                            </div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="70"/>
+</div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="8"/>
+</div>
+<div class="w-16 h-10 neo-inset rounded-lg px-2 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="8"/>
+</div>
+<button class="w-10 h-10 rounded-lg neo-raised flex items-center justify-center text-[#22c55e] neo-pressed">
+<span class="material-symbols-outlined text-lg" data-icon="check">check</span>
+</button>
+</div>
+<!-- Set 3 (PR) -->
+<div class="flex items-center gap-2 relative">
+<div class="absolute -left-2 -top-2 z-10 text-[#22c55e] bg-background rounded-full w-4 h-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px]" data-icon="workspace_premium" data-weight="fill">workspace_premium</span>
+</div>
+<div class="w-12 h-10 neo-inset rounded-lg flex items-center justify-center font-body text-sm font-medium text-on-surface border border-transparent shadow-[inset_4px_4px_8px_rgba(34,197,94,0.1),inset_-4px_-4px_8px_rgba(255,255,255,0.5)]">
+                                3
+                            </div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="82.5"/>
+</div>
+<div class="flex-1 h-10 neo-inset rounded-lg px-3 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="5"/>
+</div>
+<div class="w-16 h-10 neo-inset rounded-lg px-2 flex items-center">
+<input class="w-full text-center font-body text-on-surface" type="number" value="9"/>
+</div>
+<button class="w-10 h-10 rounded-lg neo-raised flex items-center justify-center text-secondary neo-pressed">
+<span class="material-symbols-outlined text-lg" data-icon="check">check</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add Set Button -->
+<button class="w-full py-3 rounded-xl neo-raised font-label font-medium text-primary flex items-center justify-center gap-2 neo-pressed mt-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    Add Set
+                </button>
+</article>
+<!-- Add Exercise Button -->
+<button class="w-full py-4 rounded-2xl neo-inset border-2 border-dashed border-outline-variant font-label font-medium text-on-surface-variant flex items-center justify-center gap-2 hover:text-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+                Add Exercise
+            </button>
+</section>
+<!-- Sticky Save Action -->
+<div class="fixed bottom-24 left-0 w-full px-4 md:px-8 max-w-3xl mx-auto flex justify-center z-40 pointer-events-none">
+<button class="px-8 py-4 rounded-full neo-raised font-headline font-semibold text-primary flex items-center gap-2 neo-pressed pointer-events-auto bg-[#e8eaf0]">
+<span class="material-symbols-outlined" data-icon="save">save</span>
+                Finish Workout
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center bg-[#e8eaf0] px-4 py-3 pb-safe shadow-[0_-6px_12px_rgba(0,0,0,0.05)] rounded-t-3xl md:hidden">
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Home</span>
+</a>
+<a class="text-[#6366f1] shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] bg-[#e8eaf0] rounded-xl px-3 py-1 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Workout</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">History</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Stats</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

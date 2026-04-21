@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workout History - Silk Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#4338ca",
+                        "on-secondary-fixed-variant": "#404252",
+                        "inverse-surface": "#2e3040",
+                        "tertiary-container": "#a78bfa",
+                        "secondary-fixed-dim": "#b8baca",
+                        "on-primary-container": "#e0e2ff",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-tertiary-fixed": "#2e1065",
+                        "error-container": "#fee2e2",
+                        "tertiary-fixed": "#ede9fe",
+                        "primary-container": "#818cf8",
+                        "surface-dim": "#d4d6dc",
+                        "surface-container": "#e2e4ea",
+                        "inverse-on-surface": "#e8eaf0",
+                        "surface-variant": "#dcdee4",
+                        "surface-container-highest": "#d6d8de",
+                        "on-surface": "#2e3040",
+                        "surface-bright": "#edeef4",
+                        "on-background": "#2e3040",
+                        "tertiary": "#7c3aed",
+                        "inverse-primary": "#a5b4fc",
+                        "primary-fixed": "#e0e2ff",
+                        "on-tertiary-container": "#3b1f63",
+                        "error": "#dc2626",
+                        "on-surface-variant": "#585a68",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#e8eaf0",
+                        "secondary": "#6c6e7e",
+                        "secondary-container": "#d8dae6",
+                        "outline-variant": "#d0d2dc",
+                        "surface-container-lowest": "#f0f2f8",
+                        "surface": "#e8eaf0",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "surface-container-high": "#dcdee4",
+                        "surface-container-low": "#e5e7ed",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#991b1b",
+                        "secondary-fixed": "#d8dae6",
+                        "primary": "#6366f1",
+                        "on-secondary-container": "#585a68",
+                        "surface-tint": "#6366f1",
+                        "on-primary-fixed": "#1e1b4b",
+                        "outline": "#8a8c9a",
+                        "on-secondary-fixed": "#1a1b26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #e8eaf0; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full docked full-width top-0 bg-[#e8eaf0] dark:bg-slate-900 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] dark:shadow-none sticky z-40 transition-all duration-200">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#6366f1] dark:text-indigo-400">fitness_center</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-lg text-[#6366f1] dark:text-indigo-400 tracking-tight">Silk Fitness</span>
+</div>
+<div class="w-10 h-10 rounded-full shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] overflow-hidden border-2 border-transparent">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="Close-up portrait of a fit individual with a neutral expression in bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGHLRMAjWOlRfJkwJ3ofqtIC88q3iP9UMU6vjTbsc4qF1Xw-s8H9QgItC_qhaU4J6jK7_b-QqUa3nMaR6Av0YfyLfi8EWEq6YoiCbhQKMzcnQ9pkUuyqdX3Def-wx16kmWwAtnKBbZrgpsMVGgsILd208XizKOrXbAku5h_KS_wIZLUjr6I-PNv10IS0ODoxA815OtTQcIJLaZ4_vAnYn_RavYZmnCO0HnyP_d0HrAQIVkyiIg0lwM5L64TvyIaBy6Ym30S8fwf7Y"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-md mx-auto md:max-w-4xl">
+<!-- Page Header & Filter -->
+<div class="flex justify-between items-center px-6 py-8">
+<h1 class="text-2xl font-bold text-on-surface tracking-tight">Workout History</h1>
+<button aria-label="Filter history" class="w-12 h-12 rounded-xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex items-center justify-center text-primary hover:opacity-80 active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<!-- Calendar Strip -->
+<div class="px-6 pb-8 overflow-x-auto hide-scrollbar flex gap-4 snap-x">
+<!-- Active Day -->
+<button class="snap-start min-w-[70px] h-[90px] rounded-2xl bg-[#e8eaf0] shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] flex flex-col items-center justify-center text-primary transition-all duration-200">
+<span class="text-xs font-semibold uppercase tracking-widest mb-1">Mon</span>
+<span class="text-2xl font-bold">12</span>
+</button>
+<!-- Inactive Days -->
+<button class="snap-start min-w-[70px] h-[90px] rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="text-xs font-medium uppercase tracking-widest mb-1">Tue</span>
+<span class="text-xl font-semibold">13</span>
+</button>
+<button class="snap-start min-w-[70px] h-[90px] rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="text-xs font-medium uppercase tracking-widest mb-1">Wed</span>
+<span class="text-xl font-semibold">14</span>
+</button>
+<button class="snap-start min-w-[70px] h-[90px] rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="text-xs font-medium uppercase tracking-widest mb-1">Thu</span>
+<span class="text-xl font-semibold">15</span>
+</button>
+<button class="snap-start min-w-[70px] h-[90px] rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="text-xs font-medium uppercase tracking-widest mb-1">Fri</span>
+<span class="text-xl font-semibold">16</span>
+</button>
+</div>
+<!-- Workout List -->
+<div class="px-6 space-y-10">
+<!-- Group: September 2023 -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">September 2023</h2>
+<div class="flex-1 h-px bg-[#e8eaf0] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.05),inset_-1px_-1px_2px_rgba(255,255,255,0.5)]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 (PR) -->
+<div class="p-6 rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col gap-5 hover:opacity-90 transition-opacity cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Upper Body Power</h3>
+<p class="text-sm font-medium text-on-surface-variant">Mon, Sep 12 • 55 min</p>
+</div>
+<div class="px-3 py-1.5 rounded-xl bg-[#e8eaf0] shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="text-xs font-bold text-tertiary tracking-wide">PR</span>
+</div>
+</div>
+<div class="flex gap-6 pt-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">weight</span>
+</div>
+<span class="text-sm font-bold text-on-surface">4,250 kg</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">local_fire_department</span>
+</div>
+<span class="text-sm font-bold text-on-surface">320 kcal</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-6 rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col gap-5 hover:opacity-90 transition-opacity cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Leg Day Hypertrophy</h3>
+<p class="text-sm font-medium text-on-surface-variant">Sat, Sep 10 • 65 min</p>
+</div>
+</div>
+<div class="flex gap-6 pt-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">weight</span>
+</div>
+<span class="text-sm font-bold text-on-surface">6,100 kg</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">local_fire_department</span>
+</div>
+<span class="text-sm font-bold text-on-surface">450 kcal</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Group: August 2023 -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">August 2023</h2>
+<div class="flex-1 h-px bg-[#e8eaf0] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.05),inset_-1px_-1px_2px_rgba(255,255,255,0.5)]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 3 -->
+<div class="p-6 rounded-2xl bg-[#e8eaf0] shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex flex-col gap-5 hover:opacity-90 transition-opacity cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Pull &amp; Core</h3>
+<p class="text-sm font-medium text-on-surface-variant">Tue, Aug 29 • 50 min</p>
+</div>
+</div>
+<div class="flex gap-6 pt-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">weight</span>
+</div>
+<span class="text-sm font-bold text-on-surface">3,800 kg</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-[#e8eaf0] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.04),inset_-2px_-2px_4px_rgba(255,255,255,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">local_fire_department</span>
+</div>
+<span class="text-sm font-bold text-on-surface">290 kcal</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center bg-[#e8eaf0] dark:bg-slate-900 px-4 py-3 pb-safe docked full-width rounded-t-3xl shadow-[0_-6px_12px_rgba(0,0,0,0.05)] dark:shadow-none md:hidden">
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Home</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Workout</span>
+</a>
+<a class="text-[#6366f1] shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] bg-[#e8eaf0] dark:bg-slate-800 rounded-xl px-3 py-1 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">History</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Stats</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

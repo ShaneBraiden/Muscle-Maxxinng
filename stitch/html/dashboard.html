@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#4338ca",
+                        "on-secondary-fixed-variant": "#404252",
+                        "inverse-surface": "#2e3040",
+                        "tertiary-container": "#a78bfa",
+                        "secondary-fixed-dim": "#b8baca",
+                        "on-primary-container": "#e0e2ff",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-tertiary-fixed": "#2e1065",
+                        "error-container": "#fee2e2",
+                        "tertiary-fixed": "#ede9fe",
+                        "primary-container": "#818cf8",
+                        "surface-dim": "#d4d6dc",
+                        "surface-container": "#e2e4ea",
+                        "inverse-on-surface": "#e8eaf0",
+                        "surface-variant": "#dcdee4",
+                        "surface-container-highest": "#d6d8de",
+                        "on-surface": "#2e3040",
+                        "surface-bright": "#edeef4",
+                        "on-background": "#2e3040",
+                        "tertiary": "#7c3aed",
+                        "inverse-primary": "#a5b4fc",
+                        "primary-fixed": "#e0e2ff",
+                        "on-tertiary-container": "#3b1f63",
+                        "error": "#dc2626",
+                        "on-surface-variant": "#585a68",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#e8eaf0",
+                        "secondary": "#6c6e7e",
+                        "secondary-container": "#d8dae6",
+                        "outline-variant": "#d0d2dc",
+                        "surface-container-lowest": "#f0f2f8",
+                        "surface": "#e8eaf0",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "surface-container-high": "#dcdee4",
+                        "surface-container-low": "#e5e7ed",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#991b1b",
+                        "secondary-fixed": "#d8dae6",
+                        "primary": "#6366f1",
+                        "on-secondary-container": "#585a68",
+                        "surface-tint": "#6366f1",
+                        "on-primary-fixed": "#1e1b4b",
+                        "outline": "#8a8c9a",
+                        "on-secondary-fixed": "#1a1b26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #e8eaf0; /* Fallback to theme surface */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Neomorphic Utilities */
+        .neo-raised {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+            background-color: #e8eaf0;
+        }
+        
+        .neo-pressed {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+            background-color: #e8eaf0;
+        }
+
+        .neo-circle {
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.08), -4px -4px 8px rgba(255,255,255,0.6);
+        }
+
+        /* PB Safe Area for Nav */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full bg-[#e8eaf0] dark:bg-slate-900 docked full-width top-0 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] dark:shadow-none z-40 relative md:sticky font-['Plus_Jakarta_Sans'] font-semibold text-lg">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full neo-raised text-[#6366f1] dark:text-indigo-400 hover:opacity-80 transition-opacity active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="material-symbols-outlined">fitness_center</span>
+</button>
+<span class="text-[#6366f1] font-bold tracking-tight">Silk Fitness</span>
+</div>
+<div>
+<div class="w-10 h-10 rounded-full neo-raised overflow-hidden border-2 border-surface flex items-center justify-center">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="close up of a modern abstract geometric sculpture in indigo and cool gray tones softly lit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaa4U-OpJx-LwsahJKr8OmBbRgV4uoTN7uqLVU9WXOaTG5rkeadkGPXxQNNDvdTT47rutSO_YGFzPewf3rDWjdoDHAecnk3N4NtwU3iWpP0EMoNXXPgt_RHW5dR3G8OiT9iKO9REY27_8fQbk79s3SvwnFpr4xOX6-qR7GyqHGpzVEMce5sakNDjh_Y09-dZCGFGTnfi25IeVtjClCFLRSlKUGCin2iZ9Zc8AmQCCyJbDq3wiNyJek6JMYDIv1R-xRE1FWCZpcrOw"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col px-6 py-6 max-w-4xl mx-auto w-full gap-8">
+<!-- Greeting & Streak -->
+<section class="flex justify-between items-center w-full">
+<div>
+<p class="text-on-surface-variant font-medium text-sm">Welcome back,</p>
+<h1 class="font-headline font-bold text-3xl text-on-surface">Hello, User!</h1>
+</div>
+<div class="neo-raised rounded-xl px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-bold text-on-surface text-sm">7 Day Streak</span>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
+<!-- Today's Routine (Primary Focus) -->
+<div class="md:col-span-8 neo-raised rounded-2xl p-6 flex flex-col justify-between min-h-[220px]">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-primary font-semibold text-sm mb-1 uppercase tracking-wider">Today's Routine</p>
+<h2 class="font-headline font-bold text-2xl text-on-surface">Push Day</h2>
+</div>
+<div class="neo-pressed rounded-lg px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">exercise</span>
+<span class="text-on-surface-variant font-medium text-xs">6 Exercises</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-end">
+<p class="text-on-surface-variant text-sm mb-4">Chest, Shoulders, and Triceps focus. Estimated time: 60 mins.</p>
+<button class="w-full neo-raised rounded-xl py-4 flex justify-center items-center gap-2 text-primary hover:opacity-80 transition-opacity active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200">
+<span class="font-bold text-lg">Start Workout</span>
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Bodyweight Mini-Card -->
+<div class="md:col-span-4 neo-raised rounded-2xl p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<p class="text-on-surface-variant font-semibold text-sm">Bodyweight</p>
+<span class="material-symbols-outlined text-on-surface-variant">scale</span>
+</div>
+<div class="flex items-end gap-2">
+<h3 class="font-headline font-bold text-4xl text-on-surface">85.5<span class="text-xl text-on-surface-variant font-medium">kg</span></h3>
+</div>
+<div class="flex items-center gap-1 mt-2 text-tertiary">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span class="text-xs font-semibold">-0.5kg this week</span>
+</div>
+</div>
+<button class="mt-6 w-full neo-pressed rounded-xl py-3 flex justify-center items-center gap-2 text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="font-medium text-sm">Log weight</span>
+</button>
+</div>
+<!-- This Week Stats -->
+<div class="md:col-span-6 neo-raised rounded-2xl p-6">
+<h3 class="text-on-surface-variant font-semibold text-sm mb-5">This Week</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="neo-pressed rounded-xl p-4 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">fitness_center</span>
+<span class="font-bold text-xl text-on-surface">12.5k</span>
+<span class="text-xs text-on-surface-variant">Volume (kg)</span>
+</div>
+<div class="neo-pressed rounded-xl p-4 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-tertiary mb-2">event_available</span>
+<span class="font-bold text-xl text-on-surface">3</span>
+<span class="text-xs text-on-surface-variant">Workouts</span>
+</div>
+<div class="neo-pressed rounded-xl p-4 col-span-2 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full neo-raised flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Calories Burned</span>
+</div>
+<span class="font-bold text-lg text-on-surface">1,450 kcal</span>
+</div>
+</div>
+</div>
+<!-- Recent PRs -->
+<div class="md:col-span-6 neo-raised rounded-2xl p-6">
+<div class="flex justify-between items-center mb-5">
+<h3 class="text-on-surface-variant font-semibold text-sm">Recent PRs</h3>
+<button class="text-primary text-xs font-medium hover:underline">View All</button>
+</div>
+<ul class="flex flex-col gap-3">
+<li class="neo-pressed rounded-xl p-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">emoji_events</span>
+</div>
+<span class="font-medium text-sm text-on-surface">Bench Press</span>
+</div>
+<span class="font-bold text-sm text-primary">100kg</span>
+</li>
+<li class="neo-pressed rounded-xl p-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">emoji_events</span>
+</div>
+<span class="font-medium text-sm text-on-surface">Squat</span>
+</div>
+<span class="font-bold text-sm text-primary">140kg</span>
+</li>
+<li class="neo-pressed rounded-xl p-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">emoji_events</span>
+</div>
+<span class="font-medium text-sm text-on-surface">Deadlift</span>
+</div>
+<span class="font-bold text-sm text-primary">160kg</span>
+</li>
+</ul>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center bg-[#e8eaf0] dark:bg-slate-900 px-4 py-3 pb-safe docked full-width bottom-0 rounded-t-3xl shadow-[0_-6px_12px_rgba(0,0,0,0.05)] dark:shadow-none">
+<!-- Active Tab: Home -->
+<a class="text-[#6366f1] shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] bg-[#e8eaf0] dark:bg-slate-800 rounded-xl px-3 py-1 flex flex-col items-center gap-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Home</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-lg">add_box</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Workout</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-lg">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">History</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-lg">monitoring</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Stats</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center gap-1 hover:text-[#6366f1] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-lg">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

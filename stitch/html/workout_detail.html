@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workout Detail - Silk Fitness</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#4338ca",
+                        "on-secondary-fixed-variant": "#404252",
+                        "inverse-surface": "#2e3040",
+                        "tertiary-container": "#a78bfa",
+                        "secondary-fixed-dim": "#b8baca",
+                        "on-primary-container": "#e0e2ff",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-tertiary-fixed": "#2e1065",
+                        "error-container": "#fee2e2",
+                        "tertiary-fixed": "#ede9fe",
+                        "primary-container": "#818cf8",
+                        "surface-dim": "#d4d6dc",
+                        "surface-container": "#e2e4ea",
+                        "inverse-on-surface": "#e8eaf0",
+                        "surface-variant": "#dcdee4",
+                        "surface-container-highest": "#d6d8de",
+                        "on-surface": "#2e3040",
+                        "surface-bright": "#edeef4",
+                        "on-background": "#2e3040",
+                        "tertiary": "#7c3aed",
+                        "inverse-primary": "#a5b4fc",
+                        "primary-fixed": "#e0e2ff",
+                        "on-tertiary-container": "#3b1f63",
+                        "error": "#dc2626",
+                        "on-surface-variant": "#585a68",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#e8eaf0",
+                        "secondary": "#6c6e7e",
+                        "secondary-container": "#d8dae6",
+                        "outline-variant": "#d0d2dc",
+                        "surface-container-lowest": "#f0f2f8",
+                        "surface": "#e8eaf0",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "surface-container-high": "#dcdee4",
+                        "surface-container-low": "#e5e7ed",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#991b1b",
+                        "secondary-fixed": "#d8dae6",
+                        "primary": "#6366f1",
+                        "on-secondary-container": "#585a68",
+                        "surface-tint": "#6366f1",
+                        "on-primary-fixed": "#1e1b4b",
+                        "outline": "#8a8c9a",
+                        "on-secondary-fixed": "#1a1b26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #e8eaf0; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed z-50 flex justify-between items-center px-6 py-4 w-full top-0 bg-[#e8eaf0] dark:bg-slate-900 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] dark:shadow-none">
+<div class="text-[#6366f1] dark:text-indigo-400 font-['Plus_Jakarta_Sans'] font-semibold text-lg hover:opacity-80 transition-opacity active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200 w-10 h-10 flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined" data-icon="fitness_center" data-weight="fill">fitness_center</span>
+</div>
+<div class="text-[#6366f1] font-bold tracking-tight font-['Plus_Jakarta_Sans'] font-semibold text-lg">Silk Fitness</div>
+<div class="hover:opacity-80 transition-opacity active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200 w-10 h-10 rounded-full shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] flex items-center justify-center bg-background overflow-hidden">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="close up portrait of a young woman with natural makeup looking slightly off camera, soft diffused lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbkCzRab92QJr8PRZKvxXE6321ZNf4zCaRVYbTctPCJM72nZupietirjgTAsdAF6RdCaIiXJHyjIg1szaUPPQ-1AL2hMXES0QaRC8MG1veXfOUS1Ra0bSf0vl3zEMhp2_MdkIQmIPMGMN4HWaDujm3h8ScJX0GzX27ym70OUqTOC3G27tlYc0QhTXEV28snlwZPX_kHVfzxsREhw3R9ZslFiQ30uJGNAMOk2TIKMrtrZSOeCJInQZvGzwKHY7C_SfWTUBct9Yk-Gw"/>
+</div>
+</nav>
+<!-- Main Canvas (Nav Shell Suppressed for Task-Focused Detail Screen) -->
+<main class="pt-28 pb-20 px-6 max-w-md mx-auto">
+<!-- Header Section -->
+<header class="mb-10">
+<p class="text-on-surface-variant font-medium text-sm mb-2 ml-1">Oct 24, 2023 • 1h 15m</p>
+<div class="flex items-start justify-between gap-4">
+<h1 class="font-headline font-bold text-3xl text-on-surface leading-tight">Upper Body<br/>Power</h1>
+<div class="bg-background shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] rounded-full px-4 py-2 flex items-center gap-1.5 mt-1 shrink-0">
+<span class="material-symbols-outlined text-tertiary text-sm">bolt</span>
+<span class="text-tertiary font-bold text-xs uppercase tracking-wide">Heavy Day</span>
+</div>
+</div>
+</header>
+<!-- Stats Grid (Neomorphic Bento) -->
+<section class="grid grid-cols-3 gap-5 mb-10">
+<div class="bg-background rounded-2xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] p-5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2 text-2xl opacity-80">fitness_center</span>
+<span class="text-xl font-bold text-on-surface mb-1">8.5k</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Vol kg</span>
+</div>
+<div class="bg-background rounded-2xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] p-5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2 text-2xl opacity-80">local_fire_department</span>
+<span class="text-xl font-bold text-on-surface mb-1">450</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Kcal</span>
+</div>
+<div class="bg-background rounded-2xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] p-5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-tertiary mb-2 text-2xl opacity-80">emoji_events</span>
+<span class="text-xl font-bold text-on-surface mb-1">2</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">PRs</span>
+</div>
+</section>
+<!-- Exercise Breakdown -->
+<section class="space-y-8 mb-12">
+<h2 class="font-headline font-semibold text-lg text-on-surface ml-1">Exercises</h2>
+<!-- Exercise Card 1 -->
+<article class="bg-background rounded-2xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] p-5">
+<div class="flex justify-between items-center mb-5">
+<h3 class="font-semibold text-base text-on-surface">Barbell Bench Press</h3>
+<div class="bg-background shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] rounded-lg px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[14px]">trending_up</span>
+<span class="text-xs font-bold text-tertiary">+5kg</span>
+</div>
+</div>
+<!-- Inset Sets Table -->
+<div class="bg-background rounded-xl shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] p-4">
+<div class="grid grid-cols-4 gap-2 mb-3 text-xs font-bold text-on-surface-variant tracking-wide uppercase">
+<span>Set</span><span>kg</span><span>Reps</span><span class="text-right">Prev</span>
+</div>
+<div class="space-y-3">
+<div class="grid grid-cols-4 gap-2 text-sm text-on-surface font-medium items-center">
+<span class="text-on-surface-variant font-bold">1</span>
+<span>80</span>
+<span>8</span>
+<span class="text-right text-on-surface-variant text-xs">80 x 7</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-sm text-on-surface font-medium items-center">
+<span class="text-on-surface-variant font-bold">2</span>
+<span>85</span>
+<span>6</span>
+<span class="text-right text-on-surface-variant text-xs">80 x 6</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-sm text-on-surface font-medium items-center">
+<span class="text-on-surface-variant font-bold">3</span>
+<span class="text-tertiary font-bold">90</span>
+<span class="text-tertiary font-bold">4</span>
+<span class="text-right text-on-surface-variant text-xs">85 x 4</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Exercise Card 2 -->
+<article class="bg-background rounded-2xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] p-5">
+<div class="flex justify-between items-center mb-5">
+<h3 class="font-semibold text-base text-on-surface">Incline Dumbbell Press</h3>
+<span class="text-xs font-bold text-on-surface-variant bg-background shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] rounded-lg px-2 py-1">Maintained</span>
+</div>
+<!-- Inset Sets Table -->
+<div class="bg-background rounded-xl shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] p-4">
+<div class="grid grid-cols-4 gap-2 mb-3 text-xs font-bold text-on-surface-variant tracking-wide uppercase">
+<span>Set</span><span>kg</span><span>Reps</span><span class="text-right">Prev</span>
+</div>
+<div class="space-y-3">
+<div class="grid grid-cols-4 gap-2 text-sm text-on-surface font-medium items-center">
+<span class="text-on-surface-variant font-bold">1</span>
+<span>30</span>
+<span>10</span>
+<span class="text-right text-on-surface-variant text-xs">30 x 10</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-sm text-on-surface font-medium items-center">
+<span class="text-on-surface-variant font-bold">2</span>
+<span>30</span>
+<span>9</span>
+<span class="text-right text-on-surface-variant text-xs">30 x 9</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Actions -->
+<section class="flex flex-col gap-4 mt-8">
+<button class="w-full bg-background text-primary font-bold rounded-xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200 py-4 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">edit_note</span> Edit Workout
+            </button>
+<button class="w-full bg-background text-error font-bold rounded-xl shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-200 py-4 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">delete</span> Delete Session
+            </button>
+</section>
+</main>
+</body></html>
