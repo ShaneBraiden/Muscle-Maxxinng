@@ -78,7 +78,7 @@ fun AuthScreen(
                 }
                 Spacer(Modifier.height(24.dp))
                 Text(
-                    text = "Silk Fitness",
+                    text = "Muscle Maxxinnng",
                     style = MaterialTheme.typography.headlineLarge,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold

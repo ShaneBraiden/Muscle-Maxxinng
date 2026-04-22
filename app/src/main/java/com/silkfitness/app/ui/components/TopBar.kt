@@ -62,7 +62,7 @@ fun AppTopBar(
             Spacer(Modifier.width(12.dp))
         }
         Text(
-            text = title ?: "Silk Fitness",
+            text = title ?: "Muscle Maxxinnng",
             color = MaterialTheme.colorScheme.primary,
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold,

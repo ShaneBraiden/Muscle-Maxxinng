@@ -1,0 +1,3 @@
+-keep,allowobfuscation,allowshrinking class com.silkfitness.app.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.silkfitness.app.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.silkfitness.app.ui.bodyweight.BodyweightViewModel

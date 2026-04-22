@@ -55,7 +55,7 @@ fun RoutineListScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
-            AppTopBar(title = "Silk Fitness")
+            AppTopBar(title = "Muscle Maxxinnng")
 
             Row(
                 modifier = Modifier
