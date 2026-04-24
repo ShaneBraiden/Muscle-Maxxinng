@@ -1,0 +1,2 @@
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.auth.AuthViewModel

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.silkfitness.app-mergeDebugResources-2:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.musclemax.app-mergeDebugResources-2:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\shane\\.gradle\\caches\\8.11.1\\transforms\\9b3ded4b9e5135bce7c13ba81e5c99df\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\shane\\.gradle\\caches\\8.11.1\\transforms\\56b98c33e696f747b3820fd46098f153\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

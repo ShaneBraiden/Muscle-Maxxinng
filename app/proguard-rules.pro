@@ -1,6 +1,6 @@
 # Firestore POJOs
--keep class com.silkfitness.app.domain.model.** { *; }
--keep class com.silkfitness.app.data.firestore.dto.** { *; }
+-keep class com.musclemax.app.domain.model.** { *; }
+-keep class com.musclemax.app.data.firestore.dto.** { *; }
 
 # kotlinx.serialization
 -keepattributes *Annotation*, InnerClasses

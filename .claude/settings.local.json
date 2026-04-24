@@ -3,7 +3,28 @@
     "allow": [
       "mcp__stitch__get_screen",
       "Bash(curl *)",
-      "Bash(xargs ls *)"
+      "Bash(xargs ls *)",
+      "Bash(./gradlew :app:testClasses)",
+      "Bash(gradle --version)",
+      "Bash(gradle :app:tasks --all)",
+      "Bash(gradle :app:tasks --all --stacktrace)",
+      "Read(//c/Users/shane/.gradle/jdks/jetbrains_s_r_o_-21-amd64-windows.2/**)",
+      "Read(//c/Program Files/Android/Android Studio/jbr/bin/**)",
+      "Bash(C:/Program Files/Android/Android Studio/jbr/bin/java.exe *)",
+      "Bash(gradle :app:testClasses)",
+      "Bash(gradle :app:compileDebugKotlin)",
+      "Bash(mkdir -p app/src/main/java/com/musclemax)",
+      "Bash(git mv *)",
+      "Bash(rmdir app/src/main/java/com/silkfitness)",
+      "Bash(rm -rf app/build build)",
+      "Bash(gradle :app:assembleDebug)",
+      "Bash(./gradlew :app:assembleDebug --no-daemon)",
+      "Bash(command -v gradle)",
+      "Bash(\"C:/Program Files/Android/Android Studio/plugins/android/resources/gradle/gradlew.bat\" --version)",
+      "Bash(gradle :app:compileDebugKotlin --no-daemon --console=plain)",
+      "Bash(gradle :app:assembleDebug --no-daemon --console=plain)",
+      "Bash(gradle :app:compileDebugJavaWithJavac --no-daemon --console=plain)",
+      "Bash(grep -E \"^\\\\.idea/|^\\\\.gradle/|^local\\\\.properties$|\\\\.iml$\")"
     ]
   }
 }

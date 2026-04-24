@@ -1,14 +1,30 @@
+# Build & IDE
 *.iml
-.gradle
-/local.properties
-/.idea
-.DS_Store
-/build
+.gradle/
+/build/
+/app/build/
 /captures
 .externalNativeBuild
-.cxx
+.cxx/
+/.idea/
+/.idea/**
+.vscode/
+
+# Local config
+/local.properties
 local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets & signing
 app/google-services.json
 *.jks
 *.keystore
+*.p12
+*.pem
+keystore.properties
+
+# Scratch
 dev/

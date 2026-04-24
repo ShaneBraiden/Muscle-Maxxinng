@@ -14,9 +14,9 @@
             MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAwEAAaOB1jCB0zAdBgNVHQ4EFgQUJp8eH/O39htbc9ZKhbF5tkkGbsUwgaMGA1UdIwSBmzCBmIAUJp8eH/O39htbc9ZKhbF5tkkGbsWhgXSkcjBwMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQAWygibNgifBmJTWIc3JrZhzWgSBeEdXI9E6G2qAcYWE70g2OAjk8sDvMbEHXIFohRMw2NDLmaUN6fczejvs9oHcPqVBy4e5E4cNyutfldmWZCUNplZw9LLUA7BGV6eEjeEAr3gg++NPfoT4YzYkRM9vvzt4rSyS2EgMSRy4UyJ2exIcudbZrMP64hsTRqs3iA4U6TeTRpZrkVUSCqRVfUY2rPdmHXXplkmlz+OGqwLyfxdpWY04IO2l9EkvQvvsvuJZzVqjzPqYC0q3QAhFLBYPQ2Akv1NShGMJTtBjZOsvb0VGa9QkqNj84qNKo9NW0nAq5/gMXXMbOx4Ejg
         </item>
     </string-array>
-    <string name="app_name">Muscle Maxxinnng</string>
+    <string name="app_name">Muscle Max</string>
     <string name="default_web_client_id">PLACEHOLDER_REPLACE_IN_GOOGLE_SERVICES_JSON</string>
-    <style name="Theme.SilkFitness" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.MuscleMax" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>

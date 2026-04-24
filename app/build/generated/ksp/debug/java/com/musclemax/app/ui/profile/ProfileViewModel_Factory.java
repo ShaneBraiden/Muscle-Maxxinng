@@ -1,0 +1,52 @@
+package com.musclemax.app.ui.profile;
+
+import com.musclemax.app.data.remote.UserRepository;
+import dagger.internal.DaggerGenerated;
+import dagger.internal.Factory;
+import dagger.internal.Provider;
+import dagger.internal.Providers;
+import dagger.internal.QualifierMetadata;
+import dagger.internal.ScopeMetadata;
+import javax.annotation.processing.Generated;
+
+@ScopeMetadata
+@QualifierMetadata
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava",
+    "cast",
+    "deprecation",
+    "nullness:initialization.field.uninitialized"
+})
+public final class ProfileViewModel_Factory implements Factory<ProfileViewModel> {
+  private final Provider<UserRepository> userRepositoryProvider;
+
+  public ProfileViewModel_Factory(Provider<UserRepository> userRepositoryProvider) {
+    this.userRepositoryProvider = userRepositoryProvider;
+  }
+
+  @Override
+  public ProfileViewModel get() {
+    return newInstance(userRepositoryProvider.get());
+  }
+
+  public static ProfileViewModel_Factory create(
+      javax.inject.Provider<UserRepository> userRepositoryProvider) {
+    return new ProfileViewModel_Factory(Providers.asDaggerProvider(userRepositoryProvider));
+  }
+
+  public static ProfileViewModel_Factory create(Provider<UserRepository> userRepositoryProvider) {
+    return new ProfileViewModel_Factory(userRepositoryProvider);
+  }
+
+  public static ProfileViewModel newInstance(UserRepository userRepository) {
+    return new ProfileViewModel(userRepository);
+  }
+}

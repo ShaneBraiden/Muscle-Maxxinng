@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SilkFitness"
+rootProject.name = "MuscleMax"
 include(":app")

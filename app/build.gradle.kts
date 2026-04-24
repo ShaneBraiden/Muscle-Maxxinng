@@ -7,18 +7,12 @@ plugins {
     alias(libs.plugins.hilt)
 }
 
-if (file("google-services.json").exists()) {
-    apply(plugin = "com.google.gms.google-services")
-} else {
-    logger.warn("google-services.json not found — Firebase features disabled. Drop your config into app/ to enable.")
-}
-
 android {
-    namespace = "com.silkfitness.app"
+    namespace = "com.musclemax.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.silkfitness.app"
+        applicationId = "com.musclemax.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -51,6 +45,13 @@ android {
     }
 }
 
+// AGP doesn't create the standard Java-plugin `testClasses` lifecycle task;
+// some tooling (IDE sync, CI wrappers) still invokes it. Register an alias
+// that compiles the debug unit-test sources so the name resolves.
+tasks.register("testClasses") {
+    dependsOn("compileDebugUnitTestSources")
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -74,13 +75,12 @@ dependencies {
 
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.kotlinx.datetime)
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.firestore)
-    implementation(libs.firebase.appcheck.playintegrity)
+    implementation(platform(libs.supabase.bom))
+    implementation(libs.supabase.postgrest)
+    implementation(libs.supabase.auth)
+    implementation(libs.ktor.client.okhttp)
 
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)

@@ -10,6 +10,6 @@ mipmap ic_launcher_round
 raw exercises
 string app_name
 string default_web_client_id
-style Theme.SilkFitness
+style Theme.MuscleMax
 xml backup_rules
 xml data_extraction_rules

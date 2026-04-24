@@ -1,0 +1,13 @@
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.bodyweight.BodyweightViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.bodyweight.BodyweightViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.dashboard.DashboardViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.dashboard.DashboardViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.history.HistoryViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.history.HistoryViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.history.WorkoutDetailViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.history.WorkoutDetailViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.log.ExercisePickerViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.log.ExercisePickerViewModel
+-keep,allowobfuscation,allowshrinking class com.musclemax.app.ui.log.LogWorkoutViewModel
